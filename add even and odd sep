@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int i,num, evencount = 0,oddcount=0;
+        Scanner scan=new Scanner(System.in);
+        num=scan.nextInt();
+        for(i=0;i<num;i++){
+            if(i%2==0){
+                evencount+=i;
+            }
+            else{
+                oddcount+=i;
+            }
+        }
+      scan.close();
+      System.out.println(evencount);
+      System.out.println(oddcount);
+    }
+}

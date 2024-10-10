@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.lang.Math;
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        int n1 = scan.nextInt();
+        int n2 = scan.nextInt();
+
+        int a = n1;
+        int b = n2;
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        int gcd = a; 
+        int lcm = (n1 * n2) / gcd;
+        System.out.printf("The GCD of %d and %d is %d.%n", n1, n2, gcd);
+        System.out.printf("The LCM of %d and %d is %d.%n", n1, n2, lcm);
+        
+        scan.close();  
+    }
+}
